@@ -32,3 +32,9 @@ def about():
 def login():
 	form = LoginForm()
 	return render_template('login.html',form=form)
+'''
+@app.route('/myProfile/<username>')
+@login_required
+def profile(username):
+	return render_template('profile.html')
+	'''
