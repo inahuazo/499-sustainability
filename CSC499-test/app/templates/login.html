@@ -1,0 +1,21 @@
+{% extends "cleanbase.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block head %}	{{ super() }}	{% endblock %}
+
+{% block Nav %}	{{ super() }}	{% endblock %}
+
+{% block content %}
+	<center>
+	<div class="column is-2 ">
+	<div class="container-fluid col-8" style="margin-top: 30px">
+	<h1>Login</h1>
+	<div class="card text-left">
+	  <div class="card-header" >
+		{{ wtf.quick_form(form) }}
+	  </div>
+	</div>
+	</div>
+	</div>
+	</center>
+{% endblock %}

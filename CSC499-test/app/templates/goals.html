@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block head %}	{{ super() }}	{% endblock %}
+
+{% block Nav %}	{{ super() }}	{% endblock %}
+
+{% block content %}
+<div class="container ">
+   <section class="hero is-info is-small">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <p class="title">
+            Sustainability Goals
+          </p>
+          <p class="subtitle">
+            Subtitle
+          </p>
+        </div>
+      </div>
+    </section>
+    <div class="box cta">
+      <p class="has-text-centered">
+         Below are the U.N. Sustainability Goals. When you click on them they will open more information on related projects, communities, and events.
+      </p>
+    </div>
+	<center>
+	<section class="container">
+		<div class="column is-3 modal-button" data-target="modal-image">
+			<div class="card is-shady">
+				<div class="card-image">
+				  <figure>
+					<img src="https://sustainabledevelopment.un.org/content/images/E_SDG_Icons-01.jpg" alt="Placeholder image">
+				  </figure>
+				</div>
+				<div class="card-content">
+				  <div class="content">
+					<h4>Click anywhere on card</h4>
+					<p></p>
+					<span class="button is-link modal-button" data-target="modal-image">Image modal</span>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</section>
+	</center>
+</div>
+{% endblock %}

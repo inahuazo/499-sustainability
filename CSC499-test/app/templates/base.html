@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		{% block head %}
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Southern Sustainability</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+		<!-- Bulma Version 0.7.x-->
+		<link rel="stylesheet" href="https://unpkg.com/bulma@0.7.5/css/bulma.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/admin.css">
+		{% endblock %}
+	</head>
+	<body>
+		{% block body %}
+		<!-- START NAV -->
+		{% block Nav %}
+		<nav class="navbar has-background-link">
+			<div class="container has-background-link">
+				<div class="navbar-brand">
+					<a class="navbar-item has-text-white is-size-3" href="../">
+					Southern Sustainability
+					</a>   
+				</div>
+				<div class="navbar-end">
+					<div class="navbar-item">
+					<a class="has-text-white is-size-4" href="../login">
+					Login
+					</a> 
+					</div>
+				</div>
+			</div>
+		</nav>
+		{% endblock %}
+		<!-- END NAV -->
+		<div class="container ">
+			<div class="columns ">
+				<div class="column is-2 ">
+                <aside class="menu is-hidden-mobile">
+                    <p class="menu-label">
+                        General
+                    </p>
+                    <ul class="menu-list">
+                        <!--<li><a class="is-active">Dashboard</a></li> -->
+                        <li><a href="../goals">Goals</a></li>
+						<li><a href="../projects">Projects</a></li>
+						<li><a href="../events">Events</a></li>
+						<li><a href="../about">About</a></li>
+                    </ul>
+                </aside>
+				</div>
+				{% block content %}{% endblock %}
+				
+			</div>
+		</div>
+		<script async type="text/javascript" src="../js/bulma.js"></script>
+		<script src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+		<script src="../js/wild.js"></script>
+	</body>
+	{% endblock %}
+</html>
